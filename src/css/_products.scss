@@ -1,0 +1,10 @@
+@import './colors';
+@import './mixins';
+
+.products {
+    padding: 5px;
+
+    &__title {
+        @include sectionHeading;
+    }
+}

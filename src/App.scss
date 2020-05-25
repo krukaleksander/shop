@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Balsamiq+Sans:wght@400;700&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 1fr 50px;
+    min-height: 100vh;
+    position: relative;
+
+}
+
+@import './css/colors';
+@import './css/navigation';
+@import './css/header';
+@import './css/home';
+@import './css/product';
+@import './css/products';
+@import './css/footer';

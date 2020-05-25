@@ -1,0 +1,12 @@
+@import './colors';
+
+.home {
+    padding: 10px;
+
+    &__heading {
+        text-align: center;
+        color: $main-color;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $main-color;
+    }
+}
