@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Basket from './components/Basket';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import ArrowBackToTop from './components/ArrowBackToTop';
 
 class App extends React.Component {
   state = {
@@ -32,6 +33,7 @@ class App extends React.Component {
         <Header />
         <Nav addNewOrder={this.addNewOrder} productsInCart={this.state.productsInCart} incrementProductsIcon={this.incrementProductsIcon} />
         <Basket order={this.state.order} />
+        <ArrowBackToTop />
         <Footer />
 
       </div>

@@ -1,0 +1,13 @@
+@import './colors';
+
+.arrow-back {
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+
+    &__icon {
+        font-size: 25px;
+        color: $main-color;
+    }
+
+}

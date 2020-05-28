@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #eeccb4;
+}
+
 .App {
   display: grid;
   grid-template-columns: 1fr;
@@ -273,6 +277,41 @@
 .closing-arrow__icon {
   font-size: 20px;
   color: #9f339f;
+}
+
+.closing-arrow__icon:nth-child(3) {
+  animation: animateHidingArrow 1.5s linear both infinite;
+}
+
+.closing-arrow__icon:nth-child(2) {
+  animation: animateHidingArrow 1.5s .3s linear both infinite;
+}
+
+.closing-arrow__icon:nth-child(1) {
+  animation: animateHidingArrow 1.5s .6s linear both infinite;
+}
+
+@keyframes animateHidingArrow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow-back {
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+}
+
+.arrow-back__icon {
+  font-size: 25px;
+  color: #4d1566;
 }
 
 .footer {
