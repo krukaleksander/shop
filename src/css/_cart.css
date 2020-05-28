@@ -1,0 +1,36 @@
+.orders {
+  position: fixed;
+  top: 60px;
+  left: -100vw;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  background: whitesmoke;
+  border: 2px solid #4d1566;
+  padding: 10px;
+  transition: .5s;
+}
+
+.orders__list {
+  list-style: none;
+}
+
+.orders__item,
+.orders .orders-sum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.orders__price {
+  align-self: flex-end;
+}
+
+.closing-arrow {
+  width: auto;
+  align-self: flex-end;
+}
+
+.closing-arrow__icon {
+  font-size: 20px;
+  color: #9f339f;
+}

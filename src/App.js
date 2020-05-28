@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import '../node_modules/normalize.css/normalize.css';
 import Header from './components/Header';
+import Basket from './components/Basket';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
@@ -24,13 +25,13 @@ class App extends React.Component {
     this.setState({
       order: ordersSum
     });
-    console.log(this.state.order);
   };
   render() {
     return (
       <div className="App">
         <Header />
         <Nav addNewOrder={this.addNewOrder} productsInCart={this.state.productsInCart} incrementProductsIcon={this.incrementProductsIcon} />
+        <Basket order={this.state.order} />
         <Footer />
 
       </div>

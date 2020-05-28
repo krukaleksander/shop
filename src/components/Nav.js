@@ -9,11 +9,15 @@ import Home from '../components/Home';
 import Products from '../components/Products';
 import About from '../components/About';
 import Terms from '../components/Terms';
-import Basket from '../components/Basket';
 
 export default function Nav(props) {
+
+    const showShoppingCart = () => {
+        const cart = document.querySelector('.orders');
+        cart.style.left = '0%';
+    };
+
     let changeFlag = true;
-    // const { incrementProductsIcon } = props;
     const generateHideMenuBtn = () => {
 
         const showMenuIcon = document.querySelector('.navigation-button__icon');
@@ -41,7 +45,7 @@ export default function Nav(props) {
             <div>
                 <div className="shoping-cart">
                     {props.productsInCart > 0 ? <span className="shoping-cart__products-number">{props.productsInCart}</span> : null}
-                    <i className="fas fa-shopping-cart shoping-cart__icon"></i>
+                    <i onClick={() => showShoppingCart()} className="fas fa-shopping-cart shoping-cart__icon"></i>
                 </div>
                 <div className="navigation-button" onClick={showMenuFn}>
                     <i className="fas fa-bars navigation-button__icon"></i>
@@ -60,17 +64,11 @@ export default function Nav(props) {
                         <li className="navigation__item">
                             <Link className="navigation__text" onClick={showMenuFn} to="/users">Regulamin</Link>
                         </li>
-                        <li className="navigation__item">
-                            <Link className="navigation__text" onClick={showMenuFn} to="/basket">Koszyk</Link>
-                        </li>
                     </ul>
                 </nav>
                 <Switch>
                     <Route path="/about">
                         <About />
-                    </Route>
-                    <Route path="/basket">
-                        <Basket />
                     </Route>
                     <Route path="/users">
                         <Terms />

@@ -1,0 +1,39 @@
+@import './colors';
+
+.orders {
+    position: fixed;
+    top: 60px;
+    left: -100vw;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    background: whitesmoke;
+    border: 2px solid $main-color;
+    padding: 10px;
+    transition: .5s;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item,
+    .orders-sum {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__price {
+        align-self: flex-end;
+    }
+
+}
+
+.closing-arrow {
+    width: auto;
+    align-self: flex-end;
+
+    &__icon {
+        font-size: 20px;
+        color: $secondary-color;
+    }
+}
