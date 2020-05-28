@@ -11,8 +11,9 @@ import About from '../components/About';
 import Terms from '../components/Terms';
 import Basket from '../components/Basket';
 
-export default function Nav() {
+export default function Nav(props) {
     let changeFlag = true;
+    // const { incrementProductsIcon } = props;
     const generateHideMenuBtn = () => {
 
         const showMenuIcon = document.querySelector('.navigation-button__icon');
@@ -35,9 +36,11 @@ export default function Nav() {
 
     };
     return (
-        <Router>
+
+        < Router >
             <div>
                 <div className="shoping-cart">
+                    {props.productsInCart > 0 ? <span className="shoping-cart__products-number">{props.productsInCart}</span> : null}
                     <i className="fas fa-shopping-cart shoping-cart__icon"></i>
                 </div>
                 <div className="navigation-button" onClick={showMenuFn}>
@@ -73,13 +76,13 @@ export default function Nav() {
                         <Terms />
                     </Route>
                     <Route path="/products">
-                        <Products />
+                        <Products incrementProductsIcon={props.incrementProductsIcon} addNewOrder={props.addNewOrder} />
                     </Route>
                     <Route path="/">
-                        <Home />
+                        <Home incrementProductsIcon={props.incrementProductsIcon} addNewOrder={props.addNewOrder} />
                     </Route>
                 </Switch>
             </div>
-        </Router>
+        </Router >
     );
 };

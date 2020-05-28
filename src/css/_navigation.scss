@@ -5,6 +5,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 35px;
 
     &__icon {
         font-size: 30px;
@@ -15,6 +16,24 @@
 .shoping-cart {
     right: 0;
     left: 10px;
+
+    &__products-number {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $main-color;
+        border-radius: 50%;
+        background: salmon;
+        font-weight: bolder;
+        font-size: 10px;
+
+
+    }
 }
 
 .navigation {
@@ -30,6 +49,21 @@
 
     &__list {
         list-style: none;
+    }
+
+    &__item {
+        border-bottom: 1px solid $main-color;
+
+        &:nth-child(5) {
+            border-bottom: none;
+        }
+    }
+
+
+
+    &__text {
+        color: rgb(255, 87, 34);
+        font-family: 'Balsamiq Sans', cursive;
     }
 }
 

@@ -1,0 +1,50 @@
+@import './colors';
+
+.order-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    background: white;
+    border: 2px solid $underline-color;
+    padding: 10px;
+
+    &__close-icon {
+        font-size: 25px;
+        color: $main-color;
+        width: 30px;
+        align-self: flex-end;
+    }
+
+    &__title {
+        font-size: 20px;
+        text-align: center;
+        color: $secondary-color;
+    }
+
+    &__star-icon {
+        align-self: center;
+        font-size: 30px;
+        color: rgb(255, 87, 34);
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: 18px;
+        color: seagreen;
+    }
+
+    &__confirm {
+        padding: 5px 10px;
+        font-size: 18px;
+        align-self: center;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 10px;
+        background-color: $main-color;
+        color: white;
+    }
+}

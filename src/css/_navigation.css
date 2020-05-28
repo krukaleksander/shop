@@ -3,6 +3,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  width: 35px;
 }
 
 .navigation-button__icon,
@@ -14,6 +15,22 @@
 .shoping-cart {
   right: 0;
   left: 10px;
+}
+
+.shoping-cart__products-number {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4d1566;
+  border-radius: 50%;
+  background: salmon;
+  font-weight: bolder;
+  font-size: 10px;
 }
 
 .navigation {
@@ -30,6 +47,19 @@
 
 .navigation__list {
   list-style: none;
+}
+
+.navigation__item {
+  border-bottom: 1px solid #4d1566;
+}
+
+.navigation__item:nth-child(5) {
+  border-bottom: none;
+}
+
+.navigation__text {
+  color: #ff5722;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 .navigation--active {
