@@ -35,6 +35,7 @@ const Cart = (props) => {
                 <span className="orders-sum__title">Suma:</span>
                 <span className="orders-sum__ammount">{ordersSum}zł</span>
             </div>
+            {ordersSum > 0 ? <button className="orders__confirm-btn">Finalizacja</button> : null}
         </div>
     );
 }

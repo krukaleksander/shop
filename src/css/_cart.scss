@@ -6,7 +6,7 @@
     left: -100vw;
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 90vw;
     background: whitesmoke;
     border: 2px solid $main-color;
     padding: 10px;
@@ -23,6 +23,18 @@
     }
 
     &__price {
+        align-self: flex-end;
+    }
+
+    &__confirm-btn {
+        margin-top: 10px;
+        padding: 10px 5px;
+        background-color: lightgreen;
+        border: 1px solid black;
+        border-radius: 2px;
+        text-transform: uppercase;
+        width: 150px;
+        font-weight: bolder;
         align-self: flex-end;
     }
 

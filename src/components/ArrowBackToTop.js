@@ -1,10 +1,10 @@
 import React from 'react';
 
 const ArrowBackToTop = () => {
-    let arrow;
+    let arrow = document.querySelector('.arrow-back');
     let hideArrowTrigger = false;
     //funkcja odpowiadająca za pojawianie się strzałki szybkiego powrotu na górę
-    // hide arrow trigger powstał po to by strzałka znikała po przewinięciu na górę.
+    // hide arrow trigger powstał po to by strzałka znikała po przewinięciu na górę.    
     const showAnArrow = () => {
         if (window.scrollY >= 250 && !hideArrowTrigger) {
             arrow.style.display = 'block';
@@ -17,7 +17,6 @@ const ArrowBackToTop = () => {
     }
 
     window.addEventListener('wheel', () => {
-
         showAnArrow();
 
     });
